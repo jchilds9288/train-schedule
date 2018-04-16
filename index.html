@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Train Schedule</title>
+
+
+
+
+
+</head>
+
+<body>
+
+    <table class="trainTable">
+        <thead>
+            <tr>
+                <th>Train</th>
+                <th>Destination</th>
+                <th>Frequency(min)</th>
+                <th>Next Train</th>
+                <th>Minutes Away</th>
+            </tr>
+        </thead>
+        <!-- <tr>
+            <td> train </td>
+            <td> dest </td>
+            <td> freq </td>
+            <td> 20:00 </td>
+            <td> 5 </td>
+
+        </tr> -->
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+    <form class="addTrainForm">
+        <label for="train">Train Name</label>
+        <input type="text" name="train">
+        
+        <label for="destination">Destination</label>
+        <input type="text" name="destination">
+        
+        <label for="destination">Train Frequency</label>
+        <input type="text" name="frequency">
+        
+        <label for="destination">First Train</label>
+        <input type="text" name="firstTrain">
+       
+        <input type="submit" value="submit">
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="app1.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!-- What we need to know:
+    1. Train Name
+    2. Train Destination
+    3. frequency
+    4. time of next train CALC
+    5. minutes away CALC
+    6. first train time
+
+Insert a Train
+    form
+        1.user fills out an submit
+        2.adds to firebase
+
+        usign Jquery val trim to get data from form
+            insert into firebase
+
+        on insert to firebase update table view
+
+        updating table view
+            Info we get back:
+                Jquery create new table row
+                push train name on to row
+                push train destination to row
+                push frequency to row
+                Calculate time of next train push to row
+                    use moment.js
+                Calculate minutes away
+                    using time of next train and current time
+                    using moment.js
+
+                push table row onto table
+
+
+
+-->
